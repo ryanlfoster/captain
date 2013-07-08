@@ -1,6 +1,60 @@
+@background_color: #ddd;
+@section_color: pink;
+@header_color: #EB2727;
+@footer_color: #EB2727;
+@lable_color: #EB2727;
+@divider_color: #EB2727;
+@divider_thickness: 7px;
 *{
 	margin: 0;
 	padding: 0;
 	border: none;
-	background: #ddd;
+	position: relative;
+	font-size: 12px;
+	background: @background_color;
+}
+
+h2{
+	font-size: 3.16666667em;
+	color: @lable_color;
+}
+h3{
+	font-size: 1.83333333em;
+	color: @lable_color;
+}
+header{
+	width: 100%;
+	background: @header_color;
+}
+
+footer{
+	width: 100%;
+	background: @footer_color;
+}
+
+.divider{
+	width: 100%;
+	height: @divider_thickness;
+	background-color: @divider_color; 
+}
+
+section{
+	&:hover{
+	
+			background-color: @section_color; 
+
+	}
+}
+
+.content{
+	width: 80%;
+	min-height: 200px;
+	margin: 0 auto;
+	.slider_show{
+		.lable{
+			h2{
+				text-align: center;
+			}
+		}
+	}
 }
