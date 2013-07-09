@@ -1,5 +1,5 @@
 @background_color: #ddd;
-@section_color: pink;
+@section_color: #ddd;
 @header_color: #EB2727;
 @footer_color: #EB2727;
 @lable_color: #EB2727;
@@ -14,6 +14,12 @@
 	background: @background_color;
 }
 
+
+p, input, textarea{
+	padding: 3px;
+	font-size: 1.2em;
+	text-align: justify;
+}
 h2{
 	font-size: 3.16666667em;
 	color: @lable_color;
@@ -40,12 +46,18 @@ footer{
 
 section{
 	&:hover{
-	
 			background-color: @section_color; 
 
 	}
 }
-
+.top{
+	display: block;
+	position: absolute;
+	width: 70px;
+	height: 25px;
+	right: 0px;
+	z-index: 1111;
+}
 .content{
 	width: 80%;
 	min-height: 200px;
@@ -56,5 +68,55 @@ section{
 				text-align: center;
 			}
 		}
+	}
+}
+
+.slider{
+	display: block;
+	width: 100%;
+	li{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+p.text{
+	left: 0px;
+	position: absolute;
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+
+input{
+	width: 80%;
+	display: block;
+	margin: 5px 10px;
+	height: 5%;
+	border: 1px solid #aaa;
+}
+textarea{
+	display: block;
+	width: 80%;
+	height: 50%;
+	margin: 5px 10px;
+	border: 1px solid #aaa;
+}
+
+#submit{
+	width: 80px;
+	height: 30px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+	&:hover{
+		background-color: white;
 	}
 }
