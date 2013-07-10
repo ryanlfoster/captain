@@ -20,10 +20,68 @@
       });
 
         
-      $(window).resize(function(){
+    $(window).resize(function(){
             $(".slider").height($(".slider li").height());
       });
 
     $(window).load(function(){
         $(".slider").height($(".slider li").height());
+
+   });
+
+    $("#submit").click(function(){
+        //alert("dsauidhsaui");
+        if(form_verify()){
+            var content=[
+                        $("#name").val(),
+                        $("#email").val(),
+                        $("#mobile").val(),
+                        $("#message").val()
+                    ].join("@@@");
+
+            alert(content);
+            $.ajax({
+                type: "POST",
+                url: "phpmail/send.php",
+                data: { data : content },
+                // dataType: 'json',
+                async: false,
+                success:function(res){
+                    show_message(res,"msgbar_success");
+                }
+            });
+        }
     });
+
+    function form_verify(){
+        if($("#name").val()==""){
+            //alert("name");
+            show_message("Captain needs to know your name, crew!","msgbar_warning");
+            $("#name").focus();
+            return false;
+        }
+        else if($("#email").val()==""){
+            //alert("email");
+            show_message("You mail address?","msgbar_warning");
+            $("#email").focus();
+            return false;
+        }
+        else if($("#message").val()==""){
+            //alert("message");
+            show_message("Captain is waiting for your message,boy!","msgbar_warning");
+            $("#message").focus();
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    
+    /*------------------------------------------------Msg Box-------------------------------------------------------*/
+        function show_message(message,class_name) {
+            $("<div/>", { class: class_name, text: message }).hide().prependTo(".contact")
+            .slideDown('fast').delay(1000).slideUp(function() { jQuery(this).remove(); });
+        }
+
+ 
