@@ -1,6 +1,7 @@
-@section_height: 300px;
+@section_height: 200px;
 @section_margin_bottom: 10px;
-@content_height: @section_height*6+@section_margin_bottom*7;
+@slider_show_height: 200px;
+@content_height: @slider_show_height+@section_height*6+@section_margin_bottom*7;
 
 
 h2{
@@ -10,12 +11,12 @@ h2{
 .videoline{
 	width: 100%;
 	left:0px;
-	top: @section_margin_bottom;
+	top: @slider_show_height+@section_margin_bottom;
 }
 
 .section(@level:0){
 	width: 100%;
-	top: @section_height*@level+@section_margin_bottom*(@level+1);
+	top: @slider_show_height+@section_height*@level+@section_margin_bottom*(@level+1);
 	left: 0px;
 }
 header{
@@ -31,25 +32,32 @@ section{
 	margin-bottom: @section_margin_bottom;
 	z-index: 999;  
 }
+.slider_show{
+	position: absolute;
+	height: @slider_show_height;
+	top:0px;
+	left: 0px;
+	z-index: 999px;
+}
 
 .video{
-	.section(4);
+	.section(5);
 }
 
 .about{
-	.section(1);
+	.section(2);
 }
 
 
 .entertainment{
-	.section(0);
+	.section(1);
 }
 
 .faq{
-	.section(2);
+	.section(3);
 }
 .contact{
-	.section(3);
+	.section(4);
 }
 .content{
 	height: @content_height;
@@ -59,22 +67,21 @@ section{
 	bottom: 100px;
 }
 
+/*------------------------------slider---------------------------------*/
+.slider{
+	li{
+		height: -50+@slider_show_height;
+		img{
+			height: -50+@slider_show_height;
+		}
+	}
+}
 /*-----------------------------about--------------------------------*/
 p.text{
 	top:40px;
 	height: -40+@section_height;
 }
 
-/*----------------------------form------------------------------------*/
-input, textarea, #submit{
-	margin: 5px 0 0;
-}
 #submit{
-	width: 50px;
-	height: 20px;
-	border: 1px solid #aaa;
-	-moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -khtml-border-radius: 8px;
-    border-radius:8px;
+	height: 35%;
 }

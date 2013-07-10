@@ -1,6 +1,7 @@
-@section_height: 450px;
+@section_height: 400px;
 @section_margin_bottom: 10px;
-@content_height: @section_height*3+@section_margin_bottom*4;
+@slider_show_height: 750px;
+@content_height: @slider_show_height+@section_height*3+@section_margin_bottom*4;
 
 header{
 	height: 80px;
@@ -12,31 +13,33 @@ footer{
 
 .firstline_left{
 	width: 33%;
-	top: @section_margin_bottom;
+	top: @slider_show_height+@section_margin_bottom;
 	left:0px;
 }
 .firstline_middle{
 	width: 33%;
-	top: @section_margin_bottom;
+	top: @slider_show_height+@section_margin_bottom;
 	left:33.5%;
 }
 .firstline_right{
 	width: 33%;
-	top: @section_margin_bottom;
+	top: @slider_show_height+@section_margin_bottom;
 	right:0px;
 }
 .secondline_left{
 	width: 66%;
-	top: @section_height+@section_margin_bottom*2;
+	top: @slider_show_height+@section_height+@section_margin_bottom*2;
 	left:0px;
 }
 .secondline_right{
 	width: 33%;
-	top: @section_height+@section_margin_bottom*2;
+	top: @slider_show_height+@section_height+@section_margin_bottom*2;
 	right:0px;
 }
 
-
+.slider_show{
+	height: @slider_show_height;
+}
 
 section{
 	height: @section_height;
@@ -49,7 +52,14 @@ section{
 	margin-bottom: @section_margin_bottom;
 	z-index: 999;  
 }
-
+.slider_show{
+	width:100%;
+	position: absolute;
+	height: @slider_show_height;
+	top:0px;
+	left: 0px;
+	z-index: 999px;
+}
 .about{
 	.firstline_left;
 }
@@ -66,29 +76,23 @@ section{
 	.secondline_right;
 }
 .content{
-	height: @section_height*2+@section_margin_bottom*3;
+	height: @slider_show_height+@section_height*2+@section_margin_bottom*3;
 }
 .top{
 	bottom: 150px;
 }
 
-
+/*------------------------------slider---------------------------------*/
+.slider{
+	li{
+		height: -50px+@slider_show_height;
+		img{
+			height: -50px+@slider_show_height;
+		}
+	}
+}
 /*-----------------------------about--------------------------------*/
 p.text{
 	top:40px;
 	height: -40+@section_height;
-}
-
-/*----------------------------form------------------------------------*/
-input, textarea, #submit{
-	margin: 10px 0 0;
-}
-#submit{
-	width: 80px;
-	height: 30px;
-	border: 1px solid #aaa;
-	-moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
 }
