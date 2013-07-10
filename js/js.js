@@ -1,4 +1,6 @@
-      $(".slider_show .slider").responsiveSlides({
+
+      
+      $(".slider").responsiveSlides({
         auto: true,             // Boolean: Animate automatically, true or false
         speed: 500,            // Integer: Speed of the transition, in milliseconds
         timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
@@ -16,3 +18,12 @@
         before: function(){},   // Function: Before callback
         after: function(){}     // Function: After callback
       });
+
+        
+      $(window).resize(function(){
+            $(".slider").height($(".slider li").height());
+      });
+
+    $(window).load(function(){
+        $(".slider").height($(".slider li").height());
+    });
