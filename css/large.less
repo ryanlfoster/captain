@@ -1,6 +1,24 @@
-@section_height: 450px;
+@section_height: 400px;
 @section_margin_bottom: 10px;
 @content_height: @section_height*3+@section_margin_bottom*4;
+
+/*---------------whitespace-------------------*/
+@big_block_margin: 20px;
+@section_padding: 0%;
+
+@firstline_left_width: 33%;
+@firstline_middle_width:31.5%;
+@firstline_right_widt:32.5%;
+@firstline_middle_gap: 1.5%;
+
+@secondline_left_width:66%;
+@secondline_right_width: 33%;
+
+
+#tit,.content{
+	margin-top: @big_block_margin;
+}
+
 
 header{
 	height: 80px;
@@ -11,37 +29,36 @@ footer{
 }
 
 .firstline_left{
-	width: 33%;
+	padding: @section_padding;
+	width: @firstline_left_width;
 	top: @section_margin_bottom;
 	left:0px;
 }
 .firstline_middle{
-	width: 33%;
+	padding: @section_padding;
+	width: @firstline_middle_width;
 	top: @section_margin_bottom;
-	left:33.5%;
+	left: @firstline_left_width+@firstline_middle_gap;
 }
 .firstline_right{
-	width: 33%;
+	padding: @section_padding;
+	width: @firstline_right_widt;
 	top: @section_margin_bottom;
 	right:0px;
 }
 .secondline_left{
-	width: 66%;
+	padding: @section_padding;
+	width: @secondline_left_width;
 	top: @section_height+@section_margin_bottom*2;
 	left:0px;
 }
 .secondline_right{
-	width: 33%;
+	padding: @section_padding;
+	width: @secondline_right_width;
 	top: @section_height+@section_margin_bottom*2;
 	right:0px;
 }
 
-
-
-section{
-	height: @section_height;
-	margin-bottom: @section_margin_bottom;
-}
 
 section{
 	position: absolute;
@@ -75,7 +92,6 @@ section{
 
 /*-----------------------------about--------------------------------*/
 p.text{
-	top:40px;
 	height: -40+@section_height;
 }
 
@@ -92,11 +108,3 @@ input, textarea, #submit{
     -khtml-border-radius: 10px;
     border-radius: 10px;
 }
-
-/*message*/
-/*.msgbar_success {
-	top: @section_margin_bottom;
-}
-.msgbar_warning {
-	top: @section_margin_bottom;
-}*/

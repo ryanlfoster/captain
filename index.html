@@ -2,20 +2,26 @@
 <html>
         <head>
                 <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
                 <meta name="viewport" content="width=device-width,initial-scale=1.0">
                 <link rel="stylesheet/less" type="text/css" href="css/style.less">
-                <link rel="stylesheet/less" media="only screen and (min-width:50px) and (max-width: 500px)" href="css/small.less">
-                <link rel="stylesheet/less" media="only screen and (min-width:501px) and (max-width: 800px)" href="css/medium.less">
-                <link rel="stylesheet/less" media="only screen and (min-width:800px)" href="css/large.less">
+               <link rel="stylesheet/less" media="only screen and (min-width:50px) and (max-width: 500px)" href="css/small.less">
+               <link rel="stylesheet/less" media="only screen and (min-width:501px) and (max-width: 800px)" href="css/medium.less">
+               <link rel="stylesheet/less" media="only screen and (min-width:800px)" href="css/large.less"> 
+
+             <!--  <link rel="stylesheet" type="text/css" href="css/style.css">
+               <link rel="stylesheet" media="only screen and (min-width:50px) and (max-width: 500px)" href="css/small.css">
+               <link rel="stylesheet" media="only screen and (min-width:501px) and (max-width: 800px)" href="css/medium.css">
+               <link rel="stylesheet" media="only screen and (min-width:800px)" href="css/large.css">-->
                 <style>
                     /*---------------------------------------------------Message Box------------------------------------------------------------*/
             .msgbar_success {
                 font-size: 16px;
                 z-index: 9999;
                 position: absolute;
-                width: 20%;
+                width: 60%;
                 top: 30%;
-                left: 40%;
+                left: 20%;
                 background: rgb(203, 255, 221); 
                 border: solid 1px rgb(11, 94, 39);
                 padding: 3px 0; 
@@ -37,24 +43,25 @@
             }
 
                 </style>
-                <script src="js/less-1.3.3.min.js"></script>
+                 <script src="js/less-1.3.3.min.js"></script>
+                <script src="js/jquery-1.10.1.min.js"></script>
+                <script src="js/responsiveslides.min.js"></script>
+               
 
                 <title></title>
-                <!--[if lt IE 9]>
+                <!--[if lt IE 7]>
                         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js&quot; type="text/javascript"></script>
                         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/ie7-squish.js&quot; type="text/javascript"></script>
                         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js&quot; type="text/javascript"></script>
                 <![endif]-->
 
 
-                <!--[if lt IE 9]>
-                        <script src="js/html5shiv.js"></script>
-                <![endif]-->
+                
         </head>
         <body>
                 <header>      
                 </header>  
-                <div class="title lable">
+                <div class="title lable" id="tit">
                     <h2>Sydney Birthday Party Specialist</h2>
                     <div class="divider"></div>     
                 </div>          
@@ -70,50 +77,61 @@
                             <h3>About</h3>
                             <div class="divider"></div>
                         </div>
-                        <p class="text">
+                        <div class="inside">
+                            <p class="text">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                             </p>
-                        </section><section class="entertainment">
-                                <div class="lable">
-                                        <h3>Entertainment</h3>
-                                        <div class="divider"></div>
-                                </div>
-
-                        </section><section class="contact">
-                                <div class="lable">
-                                        <h3>Contact</h3>
-                                        <div class="divider"></div>
-                                </div>
-                                <input id="name" type="text" placeholder="*Name">
-                                <input id="email" type="text" placeholder="*Email">
-                                <input id="mobile" type="text" placeholder="Mobile">
-                                <textarea id="message" name="" id="" cols="25" rows="10" placeholder="*Please put your message here"></textarea>
-                                <button id="submit">Submit</button>
-                        </section><section class="video">
-                                <div class="lable">
-                                        <h3>Video</h3>
-                                        <div class="divider"></div>
-                                </div>
-                        </section><section class="faq">
-                                <div class="lable">
-                                        <h3>FAQ's</h3>
-                                        <div class="divider"></div>
-                                </div>
-                        </section>
+                        </div>
+                    </section><section class="entertainment">
+                        <div class="lable">
+                                <h3>Entertainment</h3>
+                                <div class="divider"></div>
+                        </div>
+                        <div class="inside">
+                            <ul>
+                                <li><a href="#">Magic</a></li>
+                                <li><a href="#">Games</a></li>
+                                <li><a href="#">Songs</a></li>
+                                <li><a href="#">Ballon Twisting</a></li>
+                                <li><a href="#">Prizes</a></li>
+                                <li><a href="#">Magic Workshops</a></li>
+                            </ul>
+                        </div>
+                    </section><section class="contact">
+                        <div class="lable">
+                                <h3>Contact</h3>
+                                <div class="divider"></div>
+                        </div>
+                        <div class="inside">
+                            <input id="name" type="text" placeholder="*Name" title="Please put your name here">
+                            <input id="email" type="text" placeholder="*Email" title="You Email address">
+                            <input id="mobile" type="text" placeholder="Mobile" title="Your mobile number">
+                            <textarea id="message" name="" id="" cols="25" rows="10" placeholder="*Please put your message here" title="What you want to tell us?"></textarea>
+                            <button id="submit">Submit</button>
+                        </div>
+                    </section><section class="video">
+                        <div class="lable">
+                                <h3>Video</h3>
+                                <div class="divider"></div>
+                        </div>
+                        <div class="inside">
+                            
+                        </div>
+                    </section><section class="faq">
+                        <div class="lable">
+                                <h3>FAQ's</h3>
+                                <div class="divider"></div>
+                        </div>
+                        <div class="inside">
+                            <p class="text">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text dasd esince the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not ofive centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s witrelease of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaincluding versions of Lorem Ipsum.
+                            </p>
+                        </div>
+                    </section>
                 </div>
-                <a class="top" href="#content">Go To Top</a>
+                <a class="top" href="#tit">Go To Top</a>
                 <footer>
                 </footer>
-                <script src="js/jquery-1.10.1.min.js"></script>
-                <script src="js/responsiveslides.min.js"></script>
-                <script>
-                    //var h=$(".slider li").css("height");
-                    var h=$(".slider li").height();
-                    $(".slider").css({"height":h});
-                </script>
                 <script src="js/js.js"></script>
         </body>
 </html>

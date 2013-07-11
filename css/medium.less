@@ -1,7 +1,18 @@
 @section_height: 400px;
-@section_margin_bottom: 10px;
+@section_margin_bottom: 25px;
 @content_height:@section_height*3+@section_margin_bottom*4;
 
+/*---------------whitespace-------------------*/
+@big_block_margin: 20px;
+@firstline_left_width:49.5%;
+@firstline_right_width:49.5%;
+@secondline_left_width:49.5%;
+@secondline_right_width:49.5%;
+
+
+#tit,.content{
+	margin-top: @big_block_margin;
+}
 
 h2{
 	font-size: 2.36em;
@@ -14,25 +25,25 @@ h2{
 	top: @section_height*2+@section_margin_bottom*3;
 }
 .firstline_left{
-	width: 49.5%;
+	width: @firstline_left_width;
 	//top: @slider_show_height+@section_height+@section_margin_bottom*2;
 	top: @section_margin_bottom;
 	left: 0px;
 }
 .firstline_right{
-	width: 49.5%;
+	width: @firstline_right_width;
 	//top: @slider_show_height+@section_height+@section_margin_bottom*2;
 	top: @section_margin_bottom;
 	right: 0px;
 }
 .secondline_left{
-	width: 49.5%;
+	width: @secondline_left_width;
 	//top: @slider_show_height+@section_height*2+@section_margin_bottom*3;
 	top: @section_height+@section_margin_bottom*2;
 	left: 0px;
 }
 .secondline_right{
-	width: 49.5%;
+	width: @secondline_right_width;
 	//top: @slider_show_height+@section_height*2+@section_margin_bottom*3;
 	top: @section_height+@section_margin_bottom*2;
 	right: 0px;
@@ -79,7 +90,6 @@ section{
 
 /*-----------------------------about--------------------------------*/
 p.text{
-	top:40px;
 	height: -40+@section_height;
 }
 

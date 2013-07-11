@@ -39,7 +39,7 @@
                         $("#message").val()
                     ].join("@@@");
 
-            alert(content);
+           // alert(content);
             $.ajax({
                 type: "POST",
                 url: "phpmail/send.php",

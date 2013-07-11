@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  font-size: 12px;
+  background: #dddddd;
+}
+p,
+input,
+textarea {
+  padding: 3px;
+  font-size: 1.2em;
+  text-align: justify;
+}
+h2 {
+  font-size: 3.16666667em;
+  color: #eb2727;
+}
+h3 {
+  font-size: 1.83333333em;
+  color: #eb2727;
+}
+header {
+  width: 100%;
+  background: #eb2727;
+}
+footer {
+  width: 100%;
+  background: #eb2727;
+}
+.divider {
+  width: 100%;
+  height: 7px;
+  background-color: #eb2727;
+}
+.title.lable {
+  width: 80%;
+  margin: 0 auto;
+}
+section:hover {
+  background-color: #dddddd;
+}
+.top {
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 25px;
+  right: 0px;
+  z-index: 1111;
+}
+.content {
+  width: 80%;
+  min-height: 200px;
+  margin: 0 auto;
+}
+.content .slider_show .lable h2 {
+  text-align: center;
+}
+.slider {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+.slider li {
+  display: block;
+  width: 100%;
+}
+.slider li img {
+  display: block;
+  width: 100%;
+}
+p.text {
+  left: 0px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+input {
+  width: 100%;
+  display: block;
+  height: 5%;
+  border: 1px solid #aaa;
+}
+textarea {
+  display: block;
+  width: 100%;
+  height: 50%;
+  border: 1px solid #aaa;
+}
+#submit:hover {
+  background-color: white;
+}
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
