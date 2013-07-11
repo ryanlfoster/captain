@@ -4,7 +4,32 @@
 @footer_color: #EB2727;
 @lable_color: #EB2727;
 @divider_color: #EB2727;
+/*---------------------------------*/
 @divider_thickness: 7px;
+/*--------------Font-----------------------*/
+@font-face {
+    font-family: logo;
+    src: url("../font/CreakyFrank.ttf") /* TTF file for CSS3 browsers */
+}
+@font-face {
+    font-family: subtitle;
+    src: url("../font/CreakyFrank.ttf") /* TTF file for CSS3 browsers */
+}
+@font-face {
+    font-family: articltext;
+    src: url("../font/CreakyFrank.ttf") /* TTF file for CSS3 browsers */
+}
+
+
+
+
+
+
+
+
+
+
+
 *{
 	margin: 0;
 	padding: 0;
@@ -13,8 +38,9 @@
 	font-size: 12px;
 	background: @background_color;
 }
-
-
+p{
+	line-height: 18px;
+}
 p, input, textarea{
 	padding: 3px;
 	font-size: 1.2em;
@@ -24,7 +50,8 @@ h2{
 	font-size: 3.16666667em;
 	color: @lable_color;
 }
-h3{
+h3{	
+	padding: 0px 0px 5px;
 	font-size: 1.83333333em;
 	color: @lable_color;
 }
@@ -49,6 +76,7 @@ footer{
 	margin: 0 auto;
 }
 section{
+
 	&:hover{
 			background-color: @section_color; 
 
@@ -79,21 +107,26 @@ section{
 	display: block;
 	width: 80%;
 	margin: 0 auto;
+	
 	li{
 		display: block;
 		width: 100%;
+		
 		img{
+			-webkit-box-shadow: 12px 12px 14px rgba(48, 50, 64, 1);
+			-moz-box-shadow:    12px 12px 14px rgba(48, 50, 64, 1);
+			box-shadow:         12px 12px 14px rgba(48, 50, 64, 1);
 			display: block;
 			width: 100%;
 		}
 	}
 }
+
 p.text{
-	left: 0px;
-	position: absolute;
 	display: block;
-	width: 100%;
+	padding: 5px;
 	overflow: auto;
+	/*position: absolute;*/
 }
 
 input{
@@ -108,10 +141,19 @@ textarea{
 	height: 50%;
 	border: 1px solid #aaa;
 }
-
+ul{
+	list-style: none;
+	li a{
+		text-decoration: none;
+	}
+}
 #submit{
 	&:hover{
 		background-color: white;
 	}
 }
 
+#tit h2{
+	font-family: logo;
+	text-align: center;
+}

@@ -2,11 +2,16 @@
     require("class.phpmailer.php");
 
     $data=$_POST["data"];
-    echo $data;
+    $data_arr=explode("@@@", $data);
+    $name=$data_arr[0];
+    $sender=$data_arr[1];
+    $mobile=$data_arr[2];
+    $message=$data_arr[3];
+   // echo $data;
 
 
 
-    /*$mail = new PHPMailer();
+    $mail = new PHPMailer();
 
     $mail->IsSMTP();  // telling the class to use SMTP
     $mail->SMTPAuth   = true; // SMTP authentication
@@ -16,18 +21,18 @@
     $mail->Username   = "luyi@webchild.com.au"; // SMTP account username
     $mail->Password   = "hzhchllzhbjy";        // SMTP account password
 
-    $mail->SetFrom($mail_msg, $name); // FROM
+    $mail->SetFrom($message, $name); // FROM
     $mail->AddReplyTo("luyi985@gmail.com", $name); // Reply TO
 
     $mail->AddAddress("luyi985@gmail.com", $name); // recipient email
 
     $mail->Subject    = "From ".$name; // email subject
-    $mail->Body       = $mail_msg."\r\n".$mail_add;
+    $mail->Body       = $message."\r\n".$sender."\r\n".$mobile;
 
     if(!$mail->Send()) {
       echo 'Message was not sent.';
       echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
       echo 'Message has been sent.';
-    }*/
+    }
 ?>
