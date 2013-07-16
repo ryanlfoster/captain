@@ -1,13 +1,13 @@
 @section_height: 400px;
-@section_margin_bottom: 10px;
+@section_margin_bottom: 25px;
 @content_height:@section_height*3+@section_margin_bottom*4;
 
 /*---------------whitespace-------------------*/
 @big_block_margin: 20px;
-@firstline_left_width:49.5%;
-@firstline_right_width:49.5%;
-@secondline_left_width:49.5%;
-@secondline_right_width:49.5%;
+@firstline_left_width:49%;
+@firstline_right_width:48.5%;
+@secondline_left_width:49%;
+@secondline_right_width:48.5%;
 
 
 #tit,.content{
@@ -21,30 +21,25 @@ h2{
 .videoline{
 	width: 100%;
 	left:0px;
-	//top: @slider_show_height+@section_margin_bottom;
 	top: @section_height*2+@section_margin_bottom*3;
 }
 .firstline_left{
 	width: @firstline_left_width;
-	//top: @slider_show_height+@section_height+@section_margin_bottom*2;
 	top: @section_margin_bottom;
 	left: 0px;
 }
 .firstline_right{
 	width: @firstline_right_width;
-	//top: @slider_show_height+@section_height+@section_margin_bottom*2;
 	top: @section_margin_bottom;
 	right: 0px;
 }
 .secondline_left{
 	width: @secondline_left_width;
-	//top: @slider_show_height+@section_height*2+@section_margin_bottom*3;
 	top: @section_height+@section_margin_bottom*2;
 	left: 0px;
 }
 .secondline_right{
 	width: @secondline_right_width;
-	//top: @slider_show_height+@section_height*2+@section_margin_bottom*3;
 	top: @section_height+@section_margin_bottom*2;
 	right: 0px;
 }
@@ -61,6 +56,17 @@ section{
 	margin-bottom: @section_margin_bottom;
 	z-index: 999;  
 }
+
+.inside{
+	p{
+		padding: 0px 3px;
+	}
+	input, textarea{
+		width: 96%;
+		padding: 1% 2%;
+	}
+}
+
 
 .video{
 	.videoline;
