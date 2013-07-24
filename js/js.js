@@ -22,11 +22,16 @@
         
     $(window).resize(function(){
             $(".slider").height($(".slider li").height());
+            var img_height=$("#tit img").height()/2;
+            $("header").height(img_height*1.1);
+            $("header").css({'margin-bottom':-1.1*img_height});
       });
 
     $(window).load(function(){
         $(".slider").height($(".slider li").height());
-
+        var img_height=$("#tit img").height()/2;
+        $("header").height(img_height*1.1);
+        $("header").css({'margin-bottom':-1.1*img_height});
    });
 
     $("#submit").click(function(){
