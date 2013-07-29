@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding:0;
+	border: none;
+}
+body{
+	min-height: 800px;
+	background: url("../resource/bg.jpg") repeat center center;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+.logo img{
+	width: 100%;
+}
+.main{
+	min-height: 400px;
+	border-radius : 20px;
+	-webkit-border-radius : 20px;
+	-moz-border-radius : 20px;
+	border: 0px solid grey;
+	padding: 20px;
+	text-align: center;
+}
+
+#about{
+	margin: 0 auto 10px;
+	line-height: 25px;
+	font-size: 20px;
+	text-align: justify;
+	padding: 5px;
+	display: block;
+	border-radius : 10px;
+	-webkit-border-radius : 10px;
+	-moz-border-radius : 10px;
+	border:1px solid #ddd;
+	min-width: 80%;
+	max-width: 80%;
+	height: 100px;
+}
+
+#faq{
+	margin: 0 auto 10px;
+	font-size: 20px;
+	text-align: justify;
+	line-height: 25px;
+	padding: 5px;
+	display: block;
+	border-radius : 10px;
+	-webkit-border-radius : 10px;
+	-moz-border-radius : 10px;
+	border:1px solid #ddd;
+	min-width: 80%;
+	max-width: 80%;
+	margin-bottom: 5px;
+	height: 100px;
+}
+
+.bts{
+	padding-top: 10px;
+	padding-right: 10%;
+	text-align: right;
+}
+     /*------------Message Box----------------------------------*/
+            .msgbar_success {
+                font-size: 16px;
+                z-index: 9999;
+                position: absolute;
+                width: 60%;
+                top: 30%;
+                left: 20%;
+                background: rgb(203, 255, 221); 
+                border: solid 1px rgb(11, 94, 39);
+                padding: 3px 0; 
+                text-align: center; 
+                color: rgb(11, 94, 39);
+            }
+            .msgbar_warning {
+                font-size: 16px;
+                z-index: 9999;
+                position: absolute;
+                width: 60%;
+                top: 30%;
+                left: 20%;
+                background: rgb(227, 248, 118); 
+                border: solid 1px rgb(118, 141, 1);
+                padding: 3px 0; 
+                text-align: center; 
+                color: rgb(118, 141, 1);
+            }

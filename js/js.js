@@ -1,5 +1,5 @@
 
-      
+      ref();
       $(".slider").responsiveSlides({
         auto: true,             // Boolean: Animate automatically, true or false
         speed: 500,            // Integer: Speed of the transition, in milliseconds
@@ -101,4 +101,23 @@
             .slideDown('fast').delay(1000).slideUp(function() { jQuery(this).remove(); });
         }
 
- 
+    /*--------------------------------------refresh------------------------------------------*/
+    function ref(){
+        $.ajax({
+            type: "GET",
+            url: "data.json",
+            dataType: 'json',
+            async: false,
+            success:function(res){
+                $(".about .inside p").html(res.about);
+                $(".faq .inside p").html(res.faq);
+                var path="backend/server/php/files/";
+                //alert(res.pic.length);
+                var markup="";
+                for(var j=0;j<res.pic.length;j++){
+                    markup="<li><img src="+path+res.pic[j]+" alt=''></li>"+markup;
+                }
+                $("ul.slider").html(markup);
+            }
+        });
+    }
