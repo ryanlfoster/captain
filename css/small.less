@@ -1,4 +1,4 @@
-@section_height: 330px;
+@section_height: 350px;
 @section_margin_bottom: 30px;
 @content_height: @section_height*5+@section_margin_bottom*6;
 /*---------------whitespace-------------------*/
@@ -25,6 +25,9 @@ h2{
 	width: 100%;
 	top: @section_height*@level+@section_margin_bottom*(@level+1);
 	left: 0px;
+	.inside{
+		min-height: @section_height*.7;
+	}
 }
 /*header{
 	height: 50px;
@@ -73,8 +76,8 @@ p.text{
 }
 
 /*----------------------------form------------------------------------*/
-input, textarea, #submit{
-	margin: 5px 0 0;
+input, textarea,select,#submit{
+	margin: 3px 0 0;
 }
 #submit{
 	width: 50px;

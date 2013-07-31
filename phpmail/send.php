@@ -7,6 +7,9 @@
     $sender=$data_arr[1];
     $mobile=$data_arr[2];
     $message=$data_arr[3];
+    $suburb=$data_arr[4];
+    $date=$data_arr[5];
+    $type=$data_arr[6];
    // echo $data;
 
 
@@ -27,7 +30,7 @@
     $mail->AddAddress("luyi985@gmail.com", $name); // recipient email
 
     $mail->Subject    = "From ".$name; // email subject
-    $mail->Body       = $message."\r\n".$sender."\r\n".$mobile;
+    $mail->Body       = $message."\r\n\r\nEmail:".$sender."\r\nPhone Number:".$mobile."\r\nSuburb:".$suburb."\r\nEvent Date:". $date."\r\nEvent Type:".$type ;
 
     if(!$mail->Send()) {
       echo 'Message was not sent.';

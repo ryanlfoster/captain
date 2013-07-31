@@ -41,10 +41,13 @@
                         $("#name").val(),
                         $("#email").val(),
                         $("#mobile").val(),
-                        $("#message").val()
+                        $("#message").val(),
+                        $("#suburb").val(),
+                        $("#datepicker").val(),
+                        $('#type option:selected').text(),
                     ].join("@@@");
 
-           // alert(content);
+            //alert(content);
             $.ajax({
                 type: "POST",
                 url: "phpmail/send.php",
@@ -121,3 +124,15 @@
             }
         });
     }
+
+
+$(document).ready(function(){
+    /*--------------------------------datepicker------------------------------------------*/
+    $(function(){
+          $.datepicker.setDefaults(
+            $.extend($.datepicker.regional[''])
+          );
+          $('#datepicker').datepicker();
+          $('#datepicker').datepicker('option', $.datepicker.regional['au']);
+    });
+});

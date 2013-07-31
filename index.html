@@ -11,10 +11,12 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
                 <meta name="viewport" content="width=device-width,initial-scale=1.0">
                 <link rel="stylesheet/less" type="text/css" href="css/style.less">
-               <link rel="stylesheet/less" media="only screen and (min-width:50px) and (max-width: 500px)" href="css/small.less">
-               <link rel="stylesheet/less" media="only screen and (min-width:501px) and (max-width: 800px)" href="css/medium.less">
-               <link rel="stylesheet/less" media="only screen and (min-width:800px)" href="css/large.less"> 
-
+                <link rel="stylesheet/less" media="only screen and (min-width:50px) and (max-width: 500px)" href="css/small.less">
+                <link rel="stylesheet/less" media="only screen and (min-width:501px) and (max-width: 800px)" href="css/medium.less">
+                <link rel="stylesheet/less" media="only screen and (min-width:800px)" href="css/large.less"> 
+                <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+                <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+                <!-- <link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.min.css"> -->
              <!--  <link rel="stylesheet" type="text/css" href="css/style.css">
                <link rel="stylesheet" media="only screen and (min-width:50px) and (max-width: 500px)" href="css/small.css">
                <link rel="stylesheet" media="only screen and (min-width:501px) and (max-width: 800px)" href="css/medium.css">
@@ -47,19 +49,11 @@
                 text-align: center; 
                 color: rgb(118, 141, 1);
             }
-
-                </style>
-                 <script src="js/less-1.3.3.min.js"></script>
-                <script src="js/jquery-1.10.1.min.js"></script>
-                <script src="js/responsiveslides.min.js"></script>
-               
-                <!--[if lt IE 7]>
-                        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js&quot; type="text/javascript"></script>
-                        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/ie7-squish.js&quot; type="text/javascript"></script>
-                        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js&quot; type="text/javascript"></script>
-                <![endif]-->
-
-
+            #ui-datepicker-div{
+                z-index: 9999;
+            }
+        </style>
+              
                 
         </head>
         <body>
@@ -67,7 +61,7 @@
                 </header>  
                 <div class="title lable" id="tit">
                     <img src="resource/logo.png" alt="Sydney Birthday Party Specialist">
-                    <h1>Sydney Birthday Party Specialist</h1>
+                    <!--<h1>Sydney Birthday Party Specialist</h1>-->
                     <div class="divider"></div>     
                 </div>          
                 <ul class="slider">
@@ -76,6 +70,7 @@
                  <li><img src="img/3.jpg" alt=""></li>
                  <li><img src="img/4.jpg" alt=""></li> -->
                 </ul>
+                <div class="wrapper">
                 <div class="content" id="content">
                     <section class="about">
                         <div class="lable">
@@ -93,12 +88,12 @@
                         </div>
                         <div class="inside">
                             <ul>
-                                <li><a href="#">Magic</a></li>
-                                <li><a href="#">Games</a></li>
-                                <li><a href="#">Songs</a></li>
-                                <li><a href="#">Ballon Twisting</a></li>
-                                <li><a href="#">Prizes</a></li>
-                                <li><a href="#">Magic Workshops</a></li>
+                                <li>Magic</li>
+                                <li>Games</li>
+                                <li>Songs</li>
+                                <li>Ballon Twisting</li>
+                                <li>Prizes</li>
+                                <li>Magic Workshops</li>
                             </ul>
                         </div>
                     </section><section class="contact">
@@ -109,7 +104,23 @@
                         <div class="inside">
                             <input id="name" type="text" placeholder="*Name" title="Please put your name here">
                             <input id="email" type="text" placeholder="*Email" title="You Email address">
-                            <input id="mobile" type="text" placeholder="Mobile" title="Your mobile number">
+                            <input id="mobile" type="text" placeholder="Phone Number" title="Your phone number">
+                            <input id="suburb" type="text" placeholder="Suburb" title="Please input your suburb">
+                            <input id="datepicker" type="text" placeholder="Date" title="Please select your date">
+
+                            <select class="cat_dropdown" id="type" name="CAT_Custom_215446">
+                                <option value=" ">-- Please select --</option>
+                                <option value="Child's Birthday Party">Child's Birthday Party</option>
+                                <option value="Adult's Birthday Party">Adult's Birthday Party</option>
+                                <option value="1st Birthday Party">1st Birthday Party</option>
+                                <option value="Christening">Christening</option>
+                                <option value="First Holy Communion">First Holy Communion</option>
+                                <option value="Employee Family Day">Employee Family Day</option>
+                                <option value="School Fair">School Fair</option>
+                                <option value="Community Event">Community Event</option>
+                                <option value="Other Event">Other Event</option>
+                            </select>
+
                             <textarea id="message" name="" id="" cols="25" rows="10" placeholder="*Please put your message here" title="What you want to tell us?"></textarea>
                             <button id="submit">Submit</button>
                         </div>
@@ -134,9 +145,21 @@
                         </div>
                     </section>
                 </div>
+                </div>
                 <div class="top">Go Back To Top</div>
                 <footer>
                 </footer>
+                <script src="js/less-1.3.3.min.js"></script>
+                <script src="js/jquery-1.10.1.min.js"></script>
+                <script src="js/responsiveslides.min.js"></script>
+                <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+                <script src="js/jquery-ui-i18n.js"></script>
+               
+                <!--[if lt IE 7]>
+                        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js&quot; type="text/javascript"></script>
+                        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/ie7-squish.js&quot; type="text/javascript"></script>
+                        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js&quot; type="text/javascript"></script>
+                <![endif]-->
                 <script src="js/js.js"></script>
         </body>
 </html>

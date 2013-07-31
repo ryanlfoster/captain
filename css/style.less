@@ -1,4 +1,13 @@
-@background_color: url('../resource/bg.jpg') repeat ;
+@background_color2: url('../resource/bg.jpg') repeat center top;
+@background_color1: url('../resource/bg2.png') repeat-x center bottom;
+@background_color: #f7faf8;
+.background-sectiion{
+	background: #f7faf8;
+	filter : alpha(opacity=60);
+	-khtml-opacity : 0.6;
+	-moz-opacity : 0.6;
+	opacity : 0.6;
+} 
 @section_color: @background_color;
 @header_color: #8D6832;
 @footer_color:@background_color;
@@ -6,7 +15,7 @@
 @divider_color: #EB2727;
 /*---------------------------------*/
 @divider_thickness: 7px;
-@whitespace_in_section: 15px;
+@whitespace_in_section: 0px;
 /*--------------Font-----------------------*/
 @font-face {
     font-family: logo;
@@ -16,19 +25,6 @@
     font-family: subtitle;
     src: url("../font/CreakyFrank.ttf") /* TTF file for CSS3 browsers */
 }
-@font-face {
-    font-family: articltext;
-    src: url("../font/CreakyFrank.ttf") /* TTF file for CSS3 browsers */
-}
-
-
-
-
-
-
-
-
-
 
 
 *{
@@ -39,18 +35,25 @@
 	font-size: 12px;
 	//background: @background_color;
 }
+.wrapper{
+	z-index: 999;
+	background: @background_color1;
+}
 body{
 	background: @background_color;
 }
-p,input, textarea{	
+p,input, textarea,a,span,li, select{	
+	font-weight: 400;
 	font-size: 1.2em;
 	text-align: justify;
-	font-family: articaltext;
-	line-height: 18px;
+	font-family: 'Quicksand', sans-serif;
+	line-height: 25px;
 }
-h1{
-	display: none;
+li{
+	font-weight: 700;
+	font-size: 22px;
 }
+
 h2{
 	font-size: 3.16666667em;
 	color: @lable_color;
@@ -74,9 +77,6 @@ footer{
 .divider{
 	width: 100%;
 	height: @divider_thickness;
-	border-radius : 3.5px;
-	  -webkit-border-radius : 3.5px;
-	  -moz-border-radius : 3.5px;
 	background-color: @divider_color; 
 }
 
@@ -88,11 +88,7 @@ footer{
 	width: 100%;
 }
 section{
-
-	&:hover{
-			background-color: @section_color; 
-
-	}
+	
 }
 .top{
 	  cursor : pointer;
@@ -115,7 +111,7 @@ section{
 	  opacity : 0.6;
 	  color : #FFF;
 	  font-size : 14px;
-	  z-index : 1000;
+	  z-index : 9999;
 	  &:hover{
 	  	filter : alpha(opacity=90);
   		-khtml-opacity : 0.9;
@@ -123,6 +119,7 @@ section{
   		opacity : 0.9;
   	}
 }
+
 .content{
 	width: 80%;
 	min-height: 200px;
@@ -136,7 +133,9 @@ section{
 	}
 }
 .inside{
+	.background-sectiion;
 	margin-top: @whitespace_in_section;
+	padding: 10px 5px; 
 }
 .slider{
 	display: block;
@@ -176,16 +175,18 @@ input, textarea{
 
 }
 
-input{
+input,select{
+	line-height: 20px;
 	width: 95%;
 	display: block;
-	height: 24px;
+	height: 20px;
 	border: 1px solid #aaa;
 }
 textarea{
+	line-height: 20px;
 	display: block;
 	width: 95%;
-	height: 50%;
+	height: 80px;
 	border: 1px solid #aaa;
 }
 ul{
@@ -204,4 +205,5 @@ ul{
 	font-family: logo;
 	text-align: center;
 }
+
 

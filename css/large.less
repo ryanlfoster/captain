@@ -1,4 +1,4 @@
-@section_height: 400px;
+@section_height: 450px;
 @section_margin_bottom: 10px;
 @content_height: @section_height*3+@section_margin_bottom*4;
 
@@ -20,10 +20,6 @@
 }
 
 
-/*header{
-	height: 130px;
-	margin-bottom: -10%;
-}*/
 
 footer{
 	height: 50px;
@@ -65,7 +61,10 @@ section{
 	position: absolute;
 	height: @section_height;
 	margin-bottom: @section_margin_bottom;
-	z-index: 999;  
+	z-index: 999;
+	.inside{
+		min-height: 0.8*@section_height;
+	}
 }
 
 .about{
@@ -97,7 +96,7 @@ p.text{
 }
 
 /*----------------------------form------------------------------------*/
-input, textarea, #submit{
+input, textarea, select, #submit{
 	margin: 10px 0 0;
 }
 #submit{

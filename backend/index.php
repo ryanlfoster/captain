@@ -31,8 +31,8 @@
 				<a href="../index.html"><img src="../resource/logo.png" alt="Captian Logo"></a>
 			</div>
 			<div class="main">
-				<textarea name="about" id="about" cols="25" rows="5" placeholder="What's this site about?"></textarea>
-				<textarea name="faq" id="faq" cols="25" rows="5" placeholder="What's the frequent asked questions?"></textarea>
+				<textarea name="about" id="about" cols="25" rows="5" placeholder="What's this site about?" title="What's this site about?"></textarea>
+				<textarea name="faq" id="faq" cols="25" rows="5" placeholder="What's the frequent asked questions?" title="What's the frequent asked questions"></textarea>
 				     <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
     			    <!-- Redirect browsers with JavaScript disabled to the origin page -->
     			    <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
