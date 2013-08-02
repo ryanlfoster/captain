@@ -74,6 +74,11 @@
             $("#email").focus();
             return false;
         }
+        else if(!validate($("#email").val())){
+            show_message("Captain wants a real Email, man!!!","msgbar_warning");
+            $("#email").focus();
+            return false;
+        }
         else if($("#message").val()==""){
             //alert("message");
             show_message("Captain is waiting for your message,boy!","msgbar_warning");
@@ -84,6 +89,19 @@
             return true;
         }
     }
+
+
+
+    /*-------------------------mail validation---------------------*/
+    function validate(address) {   
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;  
+        if(reg.test(address) == false) { 
+            return false;
+        }
+        else{
+            return true;
+        } 
+    } 
 /*-------------------------------Back to top-----------------------------------*/
 
                 $(window).scroll(function() {
@@ -136,3 +154,4 @@ $(document).ready(function(){
           $('#datepicker').datepicker('option', $.datepicker.regional['au']);
     });
 });
+

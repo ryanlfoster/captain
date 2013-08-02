@@ -2,21 +2,24 @@
 @background_color1: url('../resource/bg2.png') repeat-x center bottom;
 @background_color: #f7faf8;
 .background-sectiion{
-	background: #f7faf8;
-	filter : alpha(opacity=60);
-	-khtml-opacity : 0.6;
-	-moz-opacity : 0.6;
-	opacity : 0.6;
+	//background: #f7faf8;
+	background: rgba(247,250,248,0.7);
+	/*filter : alpha(opacity=70);
+	-khtml-opacity : .7;
+	-moz-opacity : .7;
+	opacity : .7;*/
+
 } 
 @section_color: @background_color;
 @header_color: #8D6832;
-@footer_color:@background_color;
+@footer_color:@header_color;
 @lable_color: #EB2727;
 @divider_color: #EB2727;
 /*---------------------------------*/
 @divider_thickness: 7px;
 @whitespace_in_section: 0px;
 /*--------------Font-----------------------*/
+
 @font-face {
     font-family: logo;
     src: url("../font/Benjamin.ttf") /* TTF file for CSS3 browsers */
@@ -38,6 +41,7 @@
 .wrapper{
 	z-index: 999;
 	background: @background_color1;
+	//background-size: 100% 100%;
 }
 body{
 	background: @background_color;
@@ -67,11 +71,37 @@ h3{
 header{
 	width: 100%;
 	background: @header_color;
+	
 }
 
 footer{
 	width: 100%;
 	background: @footer_color;
+	.container{
+		padding: 15px;
+		width: 80%;
+		margin: 0 auto;
+		.copyright{
+			span{
+				line-height: 20px;
+				color: white;
+			}
+		}
+		.cont{
+			span{
+				color: white;
+				display: block;
+				a{	
+					vertical-align: middle;
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					background: url("../resource/facebook.png") no-repeat center center;
+					background-size: 100% 100%;
+				}
+			}
+		}
+	}
 }
 
 .divider{
@@ -135,7 +165,7 @@ section{
 .inside{
 	.background-sectiion;
 	margin-top: @whitespace_in_section;
-	padding: 10px 5px; 
+	padding: 15px; 
 }
 .slider{
 	display: block;
