@@ -18,11 +18,13 @@
 
     $mail->IsSMTP();  // telling the class to use SMTP
     $mail->SMTPAuth   = true; // SMTP authentication
-    $mail->Host       = "mail.webchild.com.au"; // SMTP server
+    //$mail->Host       = "mail.webchild.com.au"; // SMTP server
+    $mail->Host       = "lulu.atspace.cc"; // SMTP server
     $mail->Port       = 465; // SMTP Port
     $mail->SMTPSecure = 'ssl';
-    $mail->Username   = "luyi@webchild.com.au"; // SMTP account username
-    $mail->Password   = "hzhchllzhbjy";        // SMTP account password
+    //$mail->Username   = "luyi@webchild.com.au"; // SMTP account username
+    $mail->Username   = "lucifer@lulu.atspace.cc"; // SMTP account username
+    $mail->Password   = "qazzaq123";        // SMTP account password
 
     $mail->SetFrom($message, $name); // FROM
     $mail->AddReplyTo("luyi985@gmail.com", $name); // Reply TO

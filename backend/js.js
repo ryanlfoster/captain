@@ -17,19 +17,20 @@ $("#publish").click(function(){
 	$("#publish").removeClass("btn-warning");
 	var abt=$("#about").val();
 	var fq=$("#faq").val();
+	var vid=$("#videoid").val();
 	var pic_arr=new Array();
 	for(var i=0; i<$(".files tr").length;i++){
 		pic_arr.push($(".files tr:nth("+i+") td:nth(1) p a").html());
 	}
 	var pic=pic_arr.join("$$$");
-	var content=abt+"@@@"+fq+"@@@"+pic;
+	var content=abt+"@@@"+fq+"@@@"+pic+"@@@"+vid;
 	implement(content);
 });
 $("#clear").click(function(){
 	$("#about,#faq").val("");
 });
 
-$("#about,#faq").change(function(){
+$("#about,#faq,#videoid").change(function(){
 	$("#publish").addClass("btn-warning");
 });
 
@@ -43,7 +44,6 @@ function implement(imp){
 		async: false,
 		success:function(res){
 			alert(res);
-			show_message(res,"msgbar_success");
 		}
 	});
 }
@@ -57,9 +57,27 @@ function ref(){
 		success:function(res){
 			$("#about").val(res.about);
 			$("#faq").val(res.faq);
+			$("#videoid").val(res.video);
 		}
 	});
 }
+
+/*--------------------------------Table change detect--------------------------------------------------*/
+setInterval(function() {
+    var $t = $(".table"),
+        rowCount = $t.data("rowCount"),
+        rowLength = $t.find("tbody").children().length;
+    if (rowCount && rowCount !== rowLength) {
+        $t.trigger("rowcountchanged").data("rowCount", rowLength);
+    }
+    else if (!rowCount) {
+        $t.data("rowCount", rowLength);
+    }
+
+}, 50);
+$(".table").on("rowcountchanged",function(){
+	$("#publish").addClass("btn-warning");
+});
 
 
  /*------------------------------------------------Msg Box-------------------------------------------------------*/

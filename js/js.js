@@ -123,26 +123,34 @@
         }
 
     /*--------------------------------------refresh------------------------------------------*/
-    function ref(){
-        $.ajax({
-            type: "GET",
-            url: "data.json",
-            dataType: 'json',
-            async: false,
-            success:function(res){
-                $(".about .inside p").html(res.about);
-                $(".faq .inside p").html(res.faq);
-                var path="backend/server/php/files/";
-                //alert(res.pic.length);
-                var markup="";
-                for(var j=0;j<res.pic.length;j++){
-                    markup="<li><img src="+path+res.pic[j]+" alt=''></li>"+markup;
-                }
-                $("ul.slider").html(markup);
+function ref(){
+    $.ajax({
+        type: "GET",
+        url: "data.json",
+        dataType: 'json',
+        async: false,
+        success:function(res){
+            $(".about .inside p").html(res.about);
+            $(".faq .inside p").html(res.faq);
+            $(".video .inside").html(video(res.video));
+            var path="backend/server/php/files/";
+            //alert(res.pic.length);
+            var markup="";
+            for(var j=0;j<res.pic.length;j++){
+                markup="<li><img src="+path+res.pic[j]+" alt=''></li>"+markup;
             }
-        });
-    }
-
+            $("ul.slider").html(markup);
+        }
+    });
+}
+/*---------------------------------video--------------------------------------*/
+function video(code){
+    var script="<object width='560' height='315'>"+
+                "<param name='movie' value='//www.youtube.com/v/"+code+"?version=3&amp;hl=en_US'></param>"+
+                "<param name='allowFullScreen' value='true'></param><param name='allowscriptaccess' value='always'></param>"+
+                "<embed src='//www.youtube.com/v/"+code+"?version=3&amp;hl=en_US' type='application/x-shockwave-flash' width='560' height='315' allowscriptaccess='always' allowfullscreen='true' style='width:100%;'></embed>";
+    return script;
+}
 
 $(document).ready(function(){
     /*--------------------------------datepicker------------------------------------------*/
